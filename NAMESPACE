@@ -1,0 +1,15 @@
+exportPattern("^[[:alpha:]]+")
+export(rMAP)
+export(mMAP)
+export(cMAP)
+export(qMAP)
+export(pMAP)
+export(plotMAP)
+export(MAPEmle)
+export(modeMAPE)
+export(dmAP)
+
+
+importFrom("stats","density","dexp","pexp","optim","constrOptim","uniroot","runif","ecdf","ks.test","integrate","ppoints")
+importFrom("graphics", "par","lines","abline","legend","plot","hist")
+
