@@ -7,7 +7,7 @@ export(pMAP)
 export(plotMAP)
 export(MAPEmle)
 export(modeMAPE)
-export(dmAP)
+export(dMAP)
 
 
 importFrom("stats","density","dexp","pexp","optim","constrOptim","uniroot","runif","ecdf","ks.test","integrate","ppoints")
