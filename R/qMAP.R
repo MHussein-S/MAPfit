@@ -54,7 +54,7 @@ qMAP<-function(p,par,distr,lower=0,upper,lower.tail=TRUE,log.p=FALSE)
   res<-c()
   for (pi in p)
     {
-    uni <- uniroot(f=qfun, p=pi, alpha=alpha,beta=beta, distpar=par, pdistname=pdistname,,f.lower = -0.5,f.upper = 0.5,lower = lower,upper = upper)$root
+    uni <- uniroot(f=qfun, p=pi, alpha=alpha,beta=beta, distpar=par, pdistname=pdistname,f.lower = -pi,f.upper = pi,lower = lower,upper = upper)$root
     res<-c(res,uni)
     }
   return(res)
