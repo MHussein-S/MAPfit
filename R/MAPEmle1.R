@@ -42,14 +42,24 @@ MAPEmle<-function (data,start)
   opt <- stats::constrOptim(theta=start,f=objfn,grad = grlnlMAP, obs = data , ui=Mat,ci = c(1,1,0),hessian = T)
   if (is.null(names(opt$par)))
     names(opt$par) <- c("alpha","beta","rate")
+  #---
+  #???here
+  
+  fisher_info<-solve(-opt$hessian)
+  #fisher_info<-solve(opt$hessian)
+  prop_sigma<-sqrt(diag(fisher_info))
+  #prop_sigma<-diag(prop_sigma)
+  upper<-opt$par+1.96*prop_sigma
+  lower<-opt$par-1.96*prop_sigma
+  #---
   loglik <- -opt$value
   k<-npar
   n<-length(data)
   AIC<--2*loglik+2*k
   BIC<- -2*loglik+ k*log(n)
   HQIC<- -2*loglik+2*k*log(log(n))
-  res=cbind(opt$par)
-  colnames(res)=c("MLE")
+  res=cbind(opt$par,prop_sigma,lower,upper)
+  colnames(res)=c("MLE","Std. Err", "Inf. 95% CI","Sup. 95% CI")
   res1=cbind(AIC,BIC, HQIC, opt$value)
   colnames(res1)=c("AIC","BIC","HQIC", "-log(Likelihood)")
   rownames(res1)=c("")
