@@ -6,7 +6,7 @@ export(qMAP)
 export(pMAP)
 export(plotMAP)
 export(MAPEmle)
-export(modeMAPE)
+export(modeMAP)
 export(dMAP)
 
 
