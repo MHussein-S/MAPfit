@@ -1,5 +1,6 @@
 MAPEmle<-function (data,start)
-{
+{   
+  library(goftest)
   #total gradient of log-likelihood function of MAPE
   grlnlMAP <- function(par, obs, ...)
   {
@@ -78,16 +79,19 @@ MAPEmle<-function (data,start)
   k<-npar
   n<-length(data)
   AIC<--2*loglik+2*k
+  AICc = -2 * loglik + 2 * k + 2 * (k * (k + 1))/(n - k - 1) #goodness.fit formula
   BIC<- -2*loglik+ k*log(n)
   HQIC<- -2*loglik+2*k*log(log(n))
   res=cbind(opt$par,prop_sigma,lower,upper)
   colnames(res)=c("MLE","Std. Err", "Inf. 95% CI","Sup. 95% CI")
-  res1=cbind(AIC,BIC, HQIC, opt$value)
-  colnames(res1)=c("AIC","BIC","HQIC", "-log(Likelihood)")
+  cvm<-cvm.test(data,"pMAP",par=opt$par,distr="exp")
+  W<-cvm$statistic
+  ad<-ad.test(data,"pMAP",par=opt$par,distr="exp")
+  A<-ad$statistic
+  res1=cbind(AIC,AICc,BIC, HQIC,W,A, opt$value)
+  colnames(res1)=c("AIC","CAIC","BIC","HQIC","W","A", "-log(Likelihood)")
   rownames(res1)=c("")
-  yemp<-ecdf(data)
-  ytheo<-pMAP(sort(data),par=opt$par,'exp' )
-  KS<-ks.test(yemp(data),ytheo)
+  KS<-suppressWarnings(ks.test(data,"pMAP",par=opt$par,distr="exp"))
   res2=cbind(KS$statistic,KS$p.value)
   colnames(res2)=c("KS Statistic","KS p-value")
   rownames(res2)=c("")
