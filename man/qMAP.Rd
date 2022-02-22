@@ -13,7 +13,7 @@
   \item{lower.tail}{logical; if TRUE, probability are P(X <= x), otherwise, P(X > x).}
   \item{log.p}{logical; if TRUE, probabilities p are given as log(p).}
 }
-\references{}
+\references{Hussein, M.; Elsayed, H.; Cordeiro, G.M. A New Family of Continuous Distributions: Properties and Estimation. Symmetry 2022, 14, 276. https://doi.org/10.3390/sym14020276}
 \author{Mohamed Hussein}
 \examples{qMAP(p=0.5,c(rate=0.2,alpha=2,beta=2),"exp",upper=100)
   qMAP(0.25,c(rate=0.2,alpha=2,beta=2),"exp",upper=100)

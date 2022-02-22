@@ -9,7 +9,7 @@
   \item{start}{named vector or list of the starting values of the distribution parameters}
 }
 
-\references{}
+\references{Hussein, M.; Elsayed, H.; Cordeiro, G.M. A New Family of Continuous Distributions: Properties and Estimation. Symmetry 2022, 14, 276. https://doi.org/10.3390/sym14020276}
 \author{Mohamed Hussein}
 \examples{
 #{

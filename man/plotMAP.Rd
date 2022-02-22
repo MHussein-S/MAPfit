@@ -16,7 +16,7 @@ breaks definition. Else breaks is passed to the function hist.}
 the histogram depending of the value of the argument histo) using the density
 function.}
   }
-\references{}
+\references{Hussein, M.; Elsayed, H.; Cordeiro, G.M. A New Family of Continuous Distributions: Properties and Estimation. Symmetry 2022, 14, 276. https://doi.org/10.3390/sym14020276}
 \author{Mohamed Hussein}
 \examples{
 #{

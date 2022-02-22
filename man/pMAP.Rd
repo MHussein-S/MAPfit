@@ -12,7 +12,7 @@
   \item{lower.tail}{logical; if TRUE, probability is P(X <= x), otherwise, P(X > x).}
   \item{log.p}{logical; if TRUE, probabilitiy p is given as log(p).}
   }
-\references{}
+\references{Hussein, M.; Elsayed, H.; Cordeiro, G.M. A New Family of Continuous Distributions: Properties and Estimation. Symmetry 2022, 14, 276. https://doi.org/10.3390/sym14020276}
 \author{Mohamed Hussein}
 \examples{pMAP(q=2,par=list(alpha=1,beta=1.5,rate=3),distr="exp")
 pMAP(c(2,3,4),par=c(scale=2,shape=2,alpha=3,beta=2),distr="weibull")}

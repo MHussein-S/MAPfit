@@ -11,7 +11,8 @@
   \item{distr}{a character string specifying the base distribution (for example, "exp" for exponential base distribution).}
   \item{log}{logical; if TRUE, the values of log(pdf), at x, are given.}
   }
-\references{}
+\references{Hussein, M.; Elsayed, H.; Cordeiro, G.M. A New Family of Continuous Distributions: Properties and Estimation. Symmetry 2022, 14, 276. https://doi.org/10.3390/sym14020276}
+
 \author{Mohamed Hussein}
 \examples{dMAP(x=2,par=list(alpha=1,beta=1.5,rate=3),distr="exp")
 dMAP(c(2,3,4),par=c(scale=2,shape=2,alpha=3,beta=2),distr="weibull")}

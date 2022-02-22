@@ -10,7 +10,7 @@
   \item{lower}{the lower end point of the interval to be searched.}
   \item{upper}{the upper end point of the interval to be searched.}
   }
-\references{}
+\references{Hussein, M.; Elsayed, H.; Cordeiro, G.M. A New Family of Continuous Distributions: Properties and Estimation. Symmetry 2022, 14, 276. https://doi.org/10.3390/sym14020276}
 \author{Mohamed
 Hussein}
 \examples{modeMAPE(parm=c(alpha=2,beta=2,rate=0.2),upper=1000)
