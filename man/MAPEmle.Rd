@@ -2,7 +2,7 @@
 \alias{MAPEmle}
 \title{Modified Alpha Power Distribution}
 \description{MLE of parameters, KS test statistic and p-value, AIC,BIC, HQIC, -log-likelihood function and convergence status for MAPE distribution}
-\value{Maximum likelihood estimates, standard error, 95\% CI, Kolmogorov Smirnov test statistic and p-value, Akaike Information Criterion,Bayesian Information Criterion, Hannan-Quinn information criterion,  the negative log-likelihood function and convergence status for Modified Alpha-Powrer distribution.}
+\value{Maximum likelihood estimates, standard error, 95\% CI, Cramer-von Misses statistic, Anderson Darling statistic, Kolmogorov Smirnov test statistic and p-value,  Akaike Information Criterion, Consistent Akaikes Information Criterion, Bayesian Information Criterion, Hannan-Quinn information criterion,  minimum value of the negative log-likelihood function and convergence status when the MAPE distribution is fitted to some data.}
 \usage{MAPEmle(data,start)}
 \arguments{
   \item{data}{a vector of data values for which the distribution is to be fitted}

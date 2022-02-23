@@ -84,9 +84,9 @@ MAPEmle<-function (data,start)
   HQIC<- -2*loglik+2*k*log(log(n))
   res=cbind(opt$par,prop_sigma,lower,upper)
   colnames(res)=c("MLE","Std. Err", "Inf. 95% CI","Sup. 95% CI")
-  cvm<-cvm.test(data,"pMAP",par=opt$par,distr="exp")
+  cvm<-goftest::cvm.test(data,"pMAP",par=opt$par,distr="exp")
   W<-cvm$statistic
-  ad<-ad.test(data,"pMAP",par=opt$par,distr="exp")
+  ad<-goftest::ad.test(data,"pMAP",par=opt$par,distr="exp")
   A<-ad$statistic
   res1=cbind(AIC,AICc,BIC, HQIC,W,A, opt$value)
   colnames(res1)=c("AIC","CAIC","BIC","HQIC","W","A", "-log(Likelihood)")

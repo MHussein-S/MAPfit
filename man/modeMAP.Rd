@@ -1,9 +1,9 @@
 \name{modeMAP}
 \alias{modeMAP}
-\title{Modified Alpha Power Exponential Distribution}
+\title{Modified Alpha Power Distribution}
 \description{Mode of MAP distribution by direct maximization of log(g(x))}
 \value{Approximation of the Mode of MAP distribution}
-\usage{modeMAPE(start=0,parm,lower=0,distr,upper)}
+\usage{modeMAP(start=0,parm,distr,lower=0,upper)}
 \arguments{
   \item{start}{Initial values for the parameters to be maximized over.}
   \item{parm}{named vector or list of the distribution parameters.}

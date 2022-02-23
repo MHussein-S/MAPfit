@@ -10,6 +10,7 @@ export(modeMAP)
 export(dMAP)
 
 
-importFrom("stats","density","dexp","pexp","optim","constrOptim","uniroot","runif","ecdf","ks.test","integrate","ppoints")
+importFrom("stats","density","dexp","pexp","qnorm","optim","constrOptim","uniroot","runif","ecdf","ks.test","integrate","ppoints")
 importFrom("graphics", "par","lines","abline","legend","plot","hist")
 
+#importFrom("goftest", "cvm.test","ad.test")

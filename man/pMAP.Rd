@@ -17,4 +17,4 @@
 \examples{pMAP(q=2,par=list(alpha=1,beta=1.5,rate=3),distr="exp")
 pMAP(c(2,3,4),par=c(scale=2,shape=2,alpha=3,beta=2),distr="weibull")}
 
-\keyword{modified qlpha power distribution, family of distributions}
+\keyword{modified alpha power distribution, family of distributions}
