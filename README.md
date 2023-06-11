@@ -11,7 +11,7 @@ install_github("MHussein-S/MAPfit")
 This will pull all the necessary functions for using the package.
 
 ##Additional information
-For more on the authors, maintainers and version history of BLNN, please refer to the description file.
+For more on the authors, maintainers and version history of MAPfit, please refer to the description file.
 
 ## License
 
